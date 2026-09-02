@@ -132,7 +132,6 @@
         }
     ];
 
-    // Special items for the specials section
     const specialItems = {
         'spec-1': { id: 'spec-1', name: 'Caramel Velvet Macchiato', price: 5.95, img: 'https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=600&q=80' },
         'spec-2': { id: 'spec-2', name: 'Nitro Cascade Cold Brew', price: 6.50, img: 'https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?auto=format&fit=crop&w=600&q=80' },
@@ -290,7 +289,6 @@
             </div>
         `).join('');
 
-        // Listeners for Quantity Controls
         cartItemsList.querySelectorAll('.minus-btn').forEach(btn => {
             btn.addEventListener('click', () => {
                 const idx = parseInt(btn.getAttribute('data-index'), 10);
@@ -305,7 +303,6 @@
             });
         });
 
-        // Calculate Totals
         const subtotal = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
         let discount = 0;
 
@@ -398,7 +395,6 @@
         return div.innerHTML;
     }
 
-    // Set default date for booking
     const bookDateInput = document.getElementById('book-date');
     if (bookDateInput) {
         const today = new Date().toISOString().split('T')[0];
@@ -452,7 +448,7 @@
             const code = couponInput.value.trim().toUpperCase();
             if (code === 'BREW15') {
                 appliedCoupon = 'BREW15';
-                couponMsg.textContent = '🎉 Promo BREW15 applied: 15% OFF!';
+                couponMsg.textContent = 'Promo BREW15 applied: 15% OFF!';
                 couponMsg.style.color = '#2ecc71';
                 renderCart();
                 showToast('15% Discount applied!');
@@ -460,7 +456,7 @@
                 couponMsg.textContent = 'Please enter promo code';
                 couponMsg.style.color = '#e5ba73';
             } else {
-                couponMsg.textContent = '❌ Invalid code';
+                couponMsg.textContent = 'Invalid promo code';
                 couponMsg.style.color = '#e74c3c';
             }
         });
@@ -527,7 +523,6 @@
             const name = document.getElementById('book-name').value;
             const guests = document.getElementById('book-guests').value;
             const date = document.getElementById('book-date').value;
-            const time = document.getElementById('book-time').value;
             const resId = '#RES-' + Math.floor(1000 + Math.random() * 9000);
 
             closeBooking();
@@ -554,7 +549,7 @@
         newsletterForm.addEventListener('submit', (e) => {
             e.preventDefault();
             const emailInput = newsletterForm.querySelector('input[type="email"]');
-            showToast(`Voucher sent! Check inbox at ${emailInput.value}`);
+            showToast(`Voucher sent to ${emailInput.value}`);
             newsletterForm.reset();
         });
     }
