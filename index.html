@@ -8,17 +8,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- FontAwesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <!-- Main Stylesheet with Cache Busting -->
-    <link rel="stylesheet" href="index.css?v=2.2">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="index.css?v=2.5">
 </head>
 <body>
 
     <!-- Top Roastery Announcement -->
     <div class="top-announcement">
         <div class="announcement-content">
-            <span><i class="fa-solid fa-mug-hot"></i> <strong>Fresh Batch Roasted Today:</strong> Enjoy 15% OFF your first coffee order with code: <mark>BREW15</mark></span>
+            <span>
+                <svg class="svg-icon inline-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M20 3H4v10c0 2.21 1.79 4 4 4h6c2.21 0 4-1.79 4-4v-3h2c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 5h-2V5h2v3zM4 19h16v2H4z"/></svg>
+                <strong>Fresh Batch Roasted Today:</strong> Enjoy 15% OFF your first coffee order with code: <mark>BREW15</mark>
+            </span>
         </div>
     </div>
 
@@ -28,7 +29,7 @@
             <!-- Brand Logo -->
             <a href="#home" class="brand-logo">
                 <div class="logo-badge">
-                    <i class="fa-solid fa-mug-hot"></i>
+                    <svg class="svg-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M20 3H4v10c0 2.21 1.79 4 4 4h6c2.21 0 4-1.79 4-4v-3h2c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 5h-2V5h2v3zM4 19h16v2H4z"/></svg>
                 </div>
                 <div class="logo-text-group">
                     <span class="logo-title">Brew<strong>Craft</strong></span>
@@ -50,22 +51,22 @@
             <!-- Header Action Tools -->
             <div class="header-actions">
                 <div class="search-box">
-                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                    <svg class="search-icon svg-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
                     <input type="text" id="coffee-search-input" placeholder="Search latte, espresso..." autocomplete="off">
                 </div>
 
                 <button type="button" class="btn-book-table" id="open-booking-btn">
-                    <i class="fa-solid fa-calendar-check"></i>
+                    <svg class="svg-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/></svg>
                     <span>Book Table</span>
                 </button>
                 
                 <button type="button" class="action-btn cart-toggle-btn" id="cart-btn" title="View Cart" aria-label="View Coffee Cart">
-                    <i class="fa-solid fa-bag-shopping"></i>
+                    <svg class="svg-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M18 6h-2c0-2.21-1.79-4-4-4S8 3.79 8 6H6c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-6-2c1.1 0 2 .9 2 2h-4c0-1.1.9-2 2-2zm6 16H6V8h2v2c0 .55.45 1 1 1s1-.45 1-1V8h4v2c0 .55.45 1 1 1s1-.45 1-1V8h2v12z"/></svg>
                     <span class="cart-counter" id="cart-counter">0</span>
                 </button>
 
                 <button type="button" class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle mobile menu">
-                    <i class="fa-solid fa-bars-staggered"></i>
+                    <svg class="svg-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
                 </button>
             </div>
         </nav>
@@ -76,7 +77,8 @@
         <div class="hero-container">
             <div class="hero-content">
                 <div class="hero-badge">
-                    <i class="fa-solid fa-seedling"></i> 100% Single Origin Arabica Beans
+                    <svg class="svg-icon inline-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M17 8C8 10 5.9 16.17 3.82 21.34l1.89.66 1.83-4.52C8.84 17.78 10.3 18 12 18c6.63 0 10-6 10-10H17zm-5 8c-1.39 0-2.61-.2-3.67-.56C9.89 12.78 12.3 9.77 17 9c0 4.42-2.69 7-5 7z"/></svg>
+                    <span>100% Single Origin Arabica Beans</span>
                 </div>
                 <h1 class="hero-title">
                     Experience The Soul of <span class="serif-italic-accent">Freshly Brewed</span> Artisanal Coffee.
@@ -87,10 +89,10 @@
                 <div class="hero-cta-group">
                     <a href="#menu" class="btn btn-primary">
                         <span>Explore Menu</span>
-                        <i class="fa-solid fa-arrow-right"></i>
+                        <svg class="svg-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
                     </a>
                     <button type="button" class="btn btn-outline" id="hero-book-btn">
-                        <i class="fa-solid fa-chair"></i>
+                        <svg class="svg-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M7 11v2h10v-2H7zm5-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>
                         <span>Reserve a Table</span>
                     </button>
                 </div>
@@ -102,7 +104,7 @@
                     </div>
                     <div class="stat-divider"></div>
                     <div class="stat-item">
-                        <span class="stat-num">4.9<i class="fa-solid fa-star"></i></span>
+                        <span class="stat-num">4.9 <svg class="svg-icon star-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg></span>
                         <span class="stat-label">25k+ Coffee Lovers</span>
                     </div>
                     <div class="stat-divider"></div>
@@ -120,14 +122,14 @@
                     <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=900&q=80" alt="Artisanal Latte with Coffee Beans" class="main-hero-img">
                     <!-- Floating Steam Badges -->
                     <div class="floating-badge badge-top">
-                        <i class="fa-solid fa-fire-flame-curved"></i>
+                        <svg class="svg-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M19.48 12.35c-1.57-.56-2.95-1.43-4.04-2.53C14.36 8.74 14 7.42 14 6c0-2.21 1.79-4 4-4s4 1.79 4 4c0 1.42-.36 2.74-1.44 3.82-1.09 1.1-2.47 1.97-4.04 2.53zM12 13.5c-3.04 0-5.5 2.46-5.5 5.5s2.46 5.5 5.5 5.5 5.5-2.46 5.5-5.5-2.46-5.5-5.5-5.5z"/></svg>
                         <div>
                             <strong>Freshly Roasted</strong>
                             <span>Small Batch Ethiopian Yirgacheffe</span>
                         </div>
                     </div>
                     <div class="floating-badge badge-bottom">
-                        <i class="fa-solid fa-award"></i>
+                        <svg class="svg-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M19 5h-2V3H7v2H5c-1.1 0-2 .9-2 2v1c0 2.55 1.92 4.63 4.39 4.94A5.01 5.01 0 0 0 11 15.9V19H7v2h10v-2h-4v-3.1a5.01 5.01 0 0 0 3.61-2.96C19.08 12.63 21 10.55 21 8V7c0-1.1-.9-2-2-2zM5 8V7h2v3.82C5.84 10.4 5 9.3 5 8zm14 0c0 1.3-.84 2.4-2 2.82V7h2v1z"/></svg>
                         <div>
                             <strong>Barista Championship 2026</strong>
                             <span>Gold Medal Winner</span>
@@ -157,15 +159,15 @@
                     </p>
                     <div class="about-features">
                         <div class="about-pill">
-                            <i class="fa-solid fa-leaf"></i>
+                            <svg class="svg-icon inline-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M17 8C8 10 5.9 16.17 3.82 21.34l1.89.66 1.83-4.52C8.84 17.78 10.3 18 12 18c6.63 0 10-6 10-10H17z"/></svg>
                             <span>Eco-Friendly Sourcing</span>
                         </div>
                         <div class="about-pill">
-                            <i class="fa-solid fa-temperature-arrow-up"></i>
+                            <svg class="svg-icon inline-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M15 13V5c0-1.66-1.34-3-3-3S9 3.34 9 5v8c-1.21.91-2 2.37-2 4 0 2.76 2.24 5 5 5s5-2.24 5-5c0-1.63-.79-3.09-2-4zm-4-8c0-.55.45-1 1-1s1 .45 1 1h-2z"/></svg>
                             <span>Micro-Roasting Precision</span>
                         </div>
                         <div class="about-pill">
-                            <i class="fa-solid fa-heart"></i>
+                            <svg class="svg-icon inline-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
                             <span>Crafted with Barista Love</span>
                         </div>
                     </div>
@@ -197,11 +199,12 @@
                         </div>
                         <p class="special-desc">Freshly steamed vanilla milk marked with bold espresso and salted amber caramel drizzle.</p>
                         <div class="flavor-notes">
-                            <span><i class="fa-solid fa-droplet"></i> Vanilla</span>
-                            <span><i class="fa-solid fa-candy-cane"></i> Salted Caramel</span>
+                            <span>Vanilla Bean</span>
+                            <span>Salted Caramel</span>
                         </div>
                         <button type="button" class="btn btn-special-add add-to-cart-btn" data-id="spec-1">
-                            <i class="fa-solid fa-plus"></i> Add to Order
+                            <svg class="svg-icon inline-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
+                            <span>Add to Order</span>
                         </button>
                     </div>
                 </div>
@@ -217,13 +220,14 @@
                             <h3>Nitro Cascade Cold Brew</h3>
                             <span class="special-price">$6.50</span>
                         </div>
-                        <p class="special-desc">Steeped for 24 hours in cold spring water and nitrogen-infused for a silky, Guinness-like creamy head.</p>
+                        <p class="special-desc">Steeped for 24 hours in cold spring water and nitrogen-infused for a silky, creamy head.</p>
                         <div class="flavor-notes">
-                            <span><i class="fa-solid fa-snowflake"></i> Chilled</span>
-                            <span><i class="fa-solid fa-cube"></i> Dark Chocolate</span>
+                            <span>Chilled Draft</span>
+                            <span>Dark Cocoa</span>
                         </div>
                         <button type="button" class="btn btn-special-add add-to-cart-btn" data-id="spec-2">
-                            <i class="fa-solid fa-plus"></i> Add to Order
+                            <svg class="svg-icon inline-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
+                            <span>Add to Order</span>
                         </button>
                     </div>
                 </div>
@@ -241,11 +245,12 @@
                         </div>
                         <p class="special-desc">Flaky twice-baked French almond croissant paired with a silky microfoam double cappuccino.</p>
                         <div class="flavor-notes">
-                            <span><i class="fa-solid fa-bread-slice"></i> French Butter</span>
-                            <span><i class="fa-solid fa-mug-saucer"></i> Cinnamon</span>
+                            <span>French Butter</span>
+                            <span>Cinnamon Foam</span>
                         </div>
                         <button type="button" class="btn btn-special-add add-to-cart-btn" data-id="spec-3">
-                            <i class="fa-solid fa-plus"></i> Add to Order
+                            <svg class="svg-icon inline-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
+                            <span>Add to Order</span>
                         </button>
                     </div>
                 </div>
@@ -265,19 +270,19 @@
             <!-- Category Filter Tabs -->
             <div class="category-tabs" id="category-tabs">
                 <button type="button" class="cat-tab active" data-category="all">
-                    <i class="fa-solid fa-mug-saucer"></i> All Offerings
+                    <span>All Offerings</span>
                 </button>
                 <button type="button" class="cat-tab" data-category="hot-coffee">
-                    <i class="fa-solid fa-mug-hot"></i> Hot Brews
+                    <span>Hot Brews</span>
                 </button>
                 <button type="button" class="cat-tab" data-category="cold-coffee">
-                    <i class="fa-solid fa-glass-water-droplet"></i> Iced & Nitro
+                    <span>Iced & Nitro</span>
                 </button>
                 <button type="button" class="cat-tab" data-category="bakery">
-                    <i class="fa-solid fa-cookie-bite"></i> Bakery & Pastries
+                    <span>Bakery & Pastries</span>
                 </button>
                 <button type="button" class="cat-tab" data-category="tea">
-                    <i class="fa-solid fa-leaf"></i> Organic Teas
+                    <span>Organic Teas</span>
                 </button>
             </div>
 
@@ -300,7 +305,7 @@
                 <div class="craft-card">
                     <div class="craft-step">01</div>
                     <div class="craft-icon">
-                        <i class="fa-solid fa-mountain-sun"></i>
+                        <svg class="svg-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M14 6l-3.75 5 2.85 3.8-1.6 1.2L7 10l-6 8h22L14 6z"/></svg>
                     </div>
                     <h3>High Altitude Harvesting</h3>
                     <p>Hand-harvested red ripe cherries grown above 1,800m altitude for dense, nutrient-rich flavor profiles.</p>
@@ -309,7 +314,7 @@
                 <div class="craft-card">
                     <div class="craft-step">02</div>
                     <div class="craft-icon">
-                        <i class="fa-solid fa-fire"></i>
+                        <svg class="svg-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M19.48 12.35c-1.57-.56-2.95-1.43-4.04-2.53C14.36 8.74 14 7.42 14 6c0-2.21 1.79-4 4-4s4 1.79 4 4c0 1.42-.36 2.74-1.44 3.82-1.09 1.1-2.47 1.97-4.04 2.53z"/></svg>
                     </div>
                     <h3>Small-Batch Drum Roasting</h3>
                     <p>Slow roasted in cast-iron Giesen roasters under precise thermal curves to highlight bean terroir.</p>
@@ -318,7 +323,7 @@
                 <div class="craft-card">
                     <div class="craft-step">03</div>
                     <div class="craft-icon">
-                        <i class="fa-solid fa-water"></i>
+                        <svg class="svg-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2c-5.33 4.55-8 8.48-8 11.8 0 4.98 3.8 8.2 8 8.2s8-3.22 8-8.2c0-3.32-2.67-7.25-8-11.8z"/></svg>
                     </div>
                     <h3>Filtered Mineral Water</h3>
                     <p>Triple reverse-osmosis water remineralized with calcium and magnesium for optimal flavor extraction.</p>
@@ -327,7 +332,7 @@
                 <div class="craft-card">
                     <div class="craft-step">04</div>
                     <div class="craft-icon">
-                        <i class="fa-solid fa-heart-pulse"></i>
+                        <svg class="svg-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
                     </div>
                     <h3>Master Barista Precision</h3>
                     <p>Precise grams, temperature, and extraction seconds dialed in every morning before first pour.</p>
@@ -347,11 +352,11 @@
             <div class="reviews-grid">
                 <div class="review-card">
                     <div class="stars">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
+                        <svg class="svg-icon star-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        <svg class="svg-icon star-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        <svg class="svg-icon star-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        <svg class="svg-icon star-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        <svg class="svg-icon star-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
                     </div>
                     <p class="review-quote">"The Cortado and Spanish Latte here are undeniably the best in the city. The aroma inside the café is pure heaven!"</p>
                     <div class="reviewer-info">
@@ -365,11 +370,11 @@
 
                 <div class="review-card">
                     <div class="stars">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
+                        <svg class="svg-icon star-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        <svg class="svg-icon star-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        <svg class="svg-icon star-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        <svg class="svg-icon star-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        <svg class="svg-icon star-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
                     </div>
                     <p class="review-quote">"Working from their outdoor patio with a Nitro Cold Brew and warm Pistachio Croissant is my favorite morning routine."</p>
                     <div class="reviewer-info">
@@ -383,11 +388,11 @@
 
                 <div class="review-card">
                     <div class="stars">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
+                        <svg class="svg-icon star-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        <svg class="svg-icon star-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        <svg class="svg-icon star-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        <svg class="svg-icon star-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        <svg class="svg-icon star-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
                     </div>
                     <p class="review-quote">"Table reservation was super seamless. The barista gave us a mini tasting session of their new Ethiopian beans. Outstanding service!"</p>
                     <div class="reviewer-info">
@@ -412,7 +417,7 @@
                     <p>Get tasting notes on fresh harvests, brewing guides, and exclusive invitations to our quarterly cupping sessions.</p>
                     <form class="newsletter-form" id="newsletter-form">
                         <div class="input-wrap">
-                            <i class="fa-solid fa-envelope"></i>
+                            <svg class="svg-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
                             <input type="email" placeholder="Enter your email address..." required>
                         </div>
                         <button type="submit" class="btn btn-subscribe">Get Coffee Voucher</button>
@@ -422,14 +427,14 @@
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Footer with Pure Vector SVG Icons -->
     <footer class="site-footer">
         <div class="section-container">
             <div class="footer-top">
                 <div class="footer-col brand-col">
                     <a href="#home" class="brand-logo">
                         <div class="logo-badge">
-                            <i class="fa-solid fa-mug-hot"></i>
+                            <svg class="svg-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M20 3H4v10c0 2.21 1.79 4 4 4h6c2.21 0 4-1.79 4-4v-3h2c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 5h-2V5h2v3zM4 19h16v2H4z"/></svg>
                         </div>
                         <div class="logo-text-group">
                             <span class="logo-title">Brew<strong>Craft</strong></span>
@@ -438,10 +443,18 @@
                     </a>
                     <p class="footer-desc">Specialty coffee roastery and artisanal bakery crafting single-origin pour overs, smooth espresso blends, and gourmet pastries.</p>
                     <div class="social-links">
-                        <a href="#" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="#" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="#" title="TikTok"><i class="fa-brands fa-tiktok"></i></a>
-                        <a href="#" title="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" title="Instagram">
+                            <svg class="svg-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                        </a>
+                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" title="Facebook">
+                            <svg class="svg-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                        </a>
+                        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" title="Twitter / X">
+                            <svg class="svg-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                        </a>
+                        <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" title="YouTube">
+                            <svg class="svg-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                        </a>
                     </div>
                 </div>
 
@@ -475,14 +488,14 @@
                         <li><span>Location:</span> <strong>45 Roaster Street, Downtown</strong></li>
                     </ul>
                     <div class="contact-pill">
-                        <i class="fa-solid fa-phone"></i>
+                        <svg class="svg-icon inline-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
                         <span>+1 (800) BREW-COFFEE</span>
                     </div>
                 </div>
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2026 BrewCraft Coffee Roasters. Handcrafted with <i class="fa-solid fa-heart" style="color: #c68b59;"></i> by <a href="https://github.com/Priyanshu-kumar-maurya" target="_blank" rel="noopener">Priyanshu Kumar Maurya</a></p>
+                <p>&copy; 2026 BrewCraft Coffee Roasters. Handcrafted with precision by <a href="https://github.com/Priyanshu-kumar-maurya" target="_blank" rel="noopener">Priyanshu Kumar Maurya</a></p>
             </div>
         </div>
     </footer>
@@ -492,11 +505,11 @@
     <aside class="cart-drawer" id="cart-drawer">
         <div class="cart-header">
             <div class="cart-title">
-                <i class="fa-solid fa-mug-hot"></i>
+                <svg class="svg-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M20 3H4v10c0 2.21 1.79 4 4 4h6c2.21 0 4-1.79 4-4v-3h2c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 5h-2V5h2v3zM4 19h16v2H4z"/></svg>
                 <h3>Your Coffee Order (<span id="cart-items-count">0</span>)</h3>
             </div>
             <button type="button" class="close-cart-btn" id="close-cart-btn" title="Close Cart">
-                <i class="fa-solid fa-xmark"></i>
+                <svg class="svg-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
             </button>
         </div>
 
@@ -530,7 +543,7 @@
 
             <button type="button" class="btn btn-checkout" id="checkout-btn">
                 <span>Place Coffee Order</span>
-                <i class="fa-solid fa-arrow-right"></i>
+                <svg class="svg-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
             </button>
         </div>
     </aside>
@@ -539,11 +552,11 @@
     <div class="modal-overlay" id="booking-modal">
         <div class="modal-card">
             <button type="button" class="modal-close-btn" id="close-booking-btn">
-                <i class="fa-solid fa-xmark"></i>
+                <svg class="svg-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
             </button>
             <div class="modal-header">
                 <div class="modal-icon">
-                    <i class="fa-solid fa-chair"></i>
+                    <svg class="svg-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/></svg>
                 </div>
                 <h2>Reserve a Cozy Table</h2>
                 <p>Enjoy fresh brews and baked delights with friends or a peaceful solo coffee session.</p>
@@ -589,7 +602,7 @@
                 </div>
                 <button type="submit" class="btn btn-primary btn-full" style="margin-top: 14px;">
                     <span>Confirm Reservation</span>
-                    <i class="fa-solid fa-check"></i>
+                    <svg class="svg-icon inline-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>
                 </button>
             </form>
         </div>
@@ -599,7 +612,7 @@
     <div class="modal-overlay" id="order-modal">
         <div class="order-success-card">
             <div class="success-icon-wrap">
-                <i class="fa-solid fa-mug-hot"></i>
+                <svg class="svg-icon" style="width: 60px; height: 60px;" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
             </div>
             <h2>Brewing Your Order!</h2>
             <p>Your order has been received. Our barista is freshly grinding your beans and crafting your beverage.</p>
@@ -610,11 +623,11 @@
 
     <!-- Toast Alerts -->
     <div class="toast-box" id="toast">
-        <i class="fa-solid fa-circle-check toast-icon"></i>
+        <svg class="toast-icon svg-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
         <span class="toast-text">Added to coffee order!</span>
     </div>
 
     <!-- Scripts with Cache Busting -->
-    <script src="index.js?v=2.2"></script>
+    <script src="index.js?v=2.5"></script>
 </body>
 </html>

@@ -6,6 +6,16 @@
 (function () {
     'use strict';
 
+    // SVG icon templates to guarantee crisp rendering with zero CDN dependencies
+    const SVG = {
+        star: '<svg class="svg-icon star-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>',
+        plus: '<svg class="svg-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>',
+        minus: '<svg class="svg-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M19 13H5v-2h14v2z"/></svg>',
+        cup: '<svg class="svg-icon" style="width: 48px; height: 48px; fill: var(--primary);" viewBox="0 0 24 24"><path fill="currentColor" d="M20 3H4v10c0 2.21 1.79 4 4 4h6c2.21 0 4-1.79 4-4v-3h2c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 5h-2V5h2v3zM4 19h16v2H4z"/></svg>',
+        check: '<svg class="toast-icon svg-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>',
+        error: '<svg class="toast-icon svg-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>'
+    };
+
     // =========================================================================
     // Coffee & Pastry Catalog Data
     // =========================================================================
@@ -208,7 +218,7 @@
         if (filtered.length === 0) {
             coffeeGrid.innerHTML = `
                 <div style="grid-column: 1 / -1; text-align: center; padding: 50px 20px; color: var(--text-muted);">
-                    <i class="fa-solid fa-mug-saucer" style="font-size: 3rem; margin-bottom: 12px; color: var(--primary);"></i>
+                    <div style="margin-bottom: 12px;">${SVG.cup}</div>
                     <h3>No coffee creations found</h3>
                     <p>Try searching for a different roast or explore our other beverage categories!</p>
                 </div>
@@ -226,7 +236,7 @@
                     <div class="coffee-card-header">
                         <h3 class="coffee-card-title">${escapeHtml(item.name)}</h3>
                         <div class="coffee-rating">
-                            <i class="fa-solid fa-star"></i>
+                            ${SVG.star}
                             <span>${item.rating}</span>
                         </div>
                     </div>
@@ -234,7 +244,7 @@
                     <div class="coffee-card-footer">
                         <span class="coffee-price">$${item.price.toFixed(2)}</span>
                         <button type="button" class="add-to-cart-btn" data-id="${item.id}" title="Add to Order">
-                            <i class="fa-solid fa-plus"></i>
+                            ${SVG.plus}
                         </button>
                     </div>
                 </div>
@@ -258,7 +268,7 @@
         if (cart.length === 0) {
             cartItemsList.innerHTML = `
                 <div class="cart-empty-state">
-                    <i class="fa-solid fa-mug-hot"></i>
+                    <div style="margin-bottom: 8px;">${SVG.cup}</div>
                     <h4>Your coffee cup is empty</h4>
                     <p>Choose from our fresh roasts and baked French pastries!</p>
                     <a href="#menu" class="btn btn-primary btn-sm" id="cart-browse-btn">View Menu</a>
@@ -282,9 +292,9 @@
                     <div class="cart-item-price">$${(item.price * item.qty).toFixed(2)}</div>
                 </div>
                 <div class="cart-item-actions">
-                    <button type="button" class="qty-btn minus-btn" data-index="${index}"><i class="fa-solid fa-minus"></i></button>
+                    <button type="button" class="qty-btn minus-btn" data-index="${index}">${SVG.minus}</button>
                     <span class="qty-num">${item.qty}</span>
-                    <button type="button" class="qty-btn plus-btn" data-index="${index}"><i class="fa-solid fa-plus"></i></button>
+                    <button type="button" class="qty-btn plus-btn" data-index="${index}">${SVG.plus}</button>
                 </div>
             </div>
         `).join('');
@@ -375,13 +385,13 @@
 
     function showToast(text, isError = false) {
         toast.querySelector('.toast-text').textContent = text;
-        const icon = toast.querySelector('.toast-icon');
-        if (isError) {
-            icon.className = 'fa-solid fa-circle-exclamation toast-icon';
-            icon.style.color = '#e74c3c';
-        } else {
-            icon.className = 'fa-solid fa-circle-check toast-icon';
-            icon.style.color = '#c68b59';
+        const iconWrap = toast.querySelector('.toast-icon');
+        if (iconWrap) {
+            if (isError) {
+                iconWrap.outerHTML = '<svg class="toast-icon svg-icon" viewBox="0 0 24 24" style="fill: #e74c3c;"><path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>';
+            } else {
+                iconWrap.outerHTML = '<svg class="toast-icon svg-icon" viewBox="0 0 24 24" style="fill: var(--primary);"><path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>';
+            }
         }
         toast.classList.add('show');
         setTimeout(() => {
