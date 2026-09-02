@@ -1,107 +1,620 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>WEB PRAROZ</title>
-    <link rel="stylesheet" href="index.css">
-</head>
-<body>
-    <header>
-        <div class="main">
-            <dir class="logo" >
-                <img src="logo.png" alt="">
-            </dir>
-
-
-
-            <ul>
-                <li class="active"><a href="#"><i class="fa fa-home"></i> Home</a></li>                
-                <li><a href="#">About</a></li>                
-                <li><a href="#">Café au lait</a></li>                
-                             
-                <li><a href="#">Flat white</a></li>                
-                <li><a href="#">Iced coffee</a></li>                
-                <li><a href="#">Long black</a></li>                
-                <li><a href="#">Cortado</a></li>                
-                <li><a href="#"><i class="fa fa-caret-down"></i> More Recipes</a>
-                <div class="sub-menu">
-                    <ul>
-                        <li><a href="#">Affogato</a></li>
-                            <li><a href="#">Doppio</a></li>
-                    </ul>
-                </div>
-            </li>                
-            </ul>
-        </div>
-        <div class="title">
-            <h1>Coffee SHOP</h1> 
-        </div>
-        <div class="button">
-            <a href="#"class="btn">WATCH VIDEO</a>
-            <a href="#"class="btn">BASIC SKILLS</a>
-            <a href="#"class="btn">LEARN MORE</a>
-        </div>
-    </header>
-</body>
-</html>
-
-
-
-
-
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="index.css">
+    <title>BrewCraft - Artisanal Coffee Roasters & Bakery Café</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Main Stylesheet with Cache Busting -->
+    <link rel="stylesheet" href="index.css?v=2.0">
 </head>
 <body>
-    <nav>
-        <h1>zomato</h1>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Order</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-        <div class="btn">
-            <button>Login</button>
-            <button>Sign Up</button>
-        </div>    
-    </nav>
-    <div class="main-div">
-        <div class="head">
-            <h1>Stay fit <br>Eat healthy</h1>
-            <button>Order</button>
-        </div>
-        <div class="img">
-            <img src="my pic.jpg" alt="">
+
+    <!-- Top Roastery Announcement -->
+    <div class="top-announcement">
+        <div class="announcement-content">
+            <span>☕ <strong>Fresh Batch Roasted Today:</strong> Enjoy 15% OFF your first coffee order with code: <mark>BREW15</mark></span>
         </div>
     </div>
-</body>
-</html> <html> -->
-    <!-- <head>
-        <title>Restaurant Website</title>
-        <link rel="stylesheet" href="https://adnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    </head>
-    <body>
-        <div class="top">
-            <div lang="logo">Amitresto</div>
-            <i class='bx bx-menu'id="menu-icon"></i>
-            <div class="nav">
-                <a href="#">Home</a>
-                <a href="#">Menu</a>
-                <a href="#">About</a>
-                <a href="#">Location</a>
-                <a href="#">Contact</a>
+
+    <!-- Navigation Header -->
+    <header class="site-header" id="navbar">
+        <nav class="nav-container">
+            <!-- Brand Logo -->
+            <a href="#home" class="brand-logo">
+                <div class="logo-badge">
+                    <i class="fa-solid fa-mug-hot"></i>
+                </div>
+                <div class="logo-text-group">
+                    <span class="logo-title">Brew<strong>Craft</strong></span>
+                    <span class="logo-subtitle">Artisanal Roastery</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Menu -->
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">Our Story</a></li>
+                <li><a href="#specials" class="nav-link">Signature Brews</a></li>
+                <li><a href="#menu" class="nav-link">Coffee Menu</a></li>
+                <li><a href="#craft" class="nav-link">Our Craft</a></li>
+                <li><a href="#reviews" class="nav-link">Reviews</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+
+            <!-- Header Action Tools -->
+            <div class="header-actions">
+                <div class="search-box">
+                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                    <input type="text" id="coffee-search-input" placeholder="Search latte, espresso..." autocomplete="off">
+                </div>
+
+                <button type="button" class="btn-book-table" id="open-booking-btn">
+                    <i class="fa-solid fa-calendar-check"></i>
+                    <span>Book Table</span>
+                </button>
+                
+                <button type="button" class="action-btn cart-toggle-btn" id="cart-btn" title="View Cart" aria-label="View Coffee Cart">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span class="cart-counter" id="cart-counter">0</span>
+                </button>
+
+                <button type="button" class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle mobile menu">
+                    <i class="fa-solid fa-bars-staggered"></i>
+                </button>
             </div>
-            <div class="srarch">
-                <i class="fa-solid fa-search"></i>
-                <i class='bx bx-cart-alt'></i>
-                <i class="fa-solid fa-bars"></i>
-                <i class='bx bx-serach' id="serach-icon"></i>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="home">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i class="fa-solid fa-seedling"></i> 100% Single Origin Arabica Beans
+                </div>
+                <h1 class="hero-title">
+                    Experience The Soul of <span class="serif-italic-accent">Freshly Brewed</span> Artisanal Coffee.
+                </h1>
+                <p class="hero-description">
+                    Immerse yourself in velvety micro-foamed lattes, rich nitro cold brews, and oven-fresh buttery French croissants handcrafted daily by award-winning baristas.
+                </p>
+                <div class="hero-cta-group">
+                    <a href="#menu" class="btn btn-primary">
+                        <span>Explore Menu</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    <button type="button" class="btn btn-outline" id="hero-book-btn">
+                        <i class="fa-solid fa-chair"></i>
+                        <span>Reserve a Table</span>
+                    </button>
+                </div>
+                <!-- Hero Trust Stats -->
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-num">18+</span>
+                        <span class="stat-label">Single Origin Roasts</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-num">4.9<i class="fa-solid fa-star"></i></span>
+                        <span class="stat-label">25k+ Coffee Lovers</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-num">100%</span>
+                        <span class="stat-label">Organic & Fair Trade</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hero Visual Banner -->
+            <div class="hero-visual">
+                <div class="visual-glow"></div>
+                <div class="hero-img-card">
+                    <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=900&q=80" alt="Artisanal Latte with Coffee Beans" class="main-hero-img">
+                    <!-- Floating Steam Badges -->
+                    <div class="floating-badge badge-top">
+                        <i class="fa-solid fa-fire-flame-curved"></i>
+                        <div>
+                            <strong>Freshly Roasted</strong>
+                            <span>Small Batch Ethiopian Yirgacheffe</span>
+                        </div>
+                    </div>
+                    <div class="floating-badge badge-bottom">
+                        <i class="fa-solid fa-award"></i>
+                        <div>
+                            <strong>Barista Championship 2026</strong>
+                            <span>Gold Medal Winner</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </body>
-</html> --> 
+    </section>
+
+    <!-- Our Story Section -->
+    <section class="about-section" id="about">
+        <div class="section-container">
+            <div class="about-grid">
+                <div class="about-images">
+                    <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=600&q=80" alt="Coffee Brewing Pour Over" class="about-img-1">
+                    <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=500&q=80" alt="Cozy Coffee Shop Ambience" class="about-img-2">
+                </div>
+                <div class="about-content">
+                    <span class="section-subtitle">Since 2018</span>
+                    <h2 class="section-title">Where Passion Meets The Perfect Roast</h2>
+                    <p class="about-text">
+                        At BrewCraft, coffee is not just a morning beverage; it is an art form. We travel directly to volcanic highland farms across Ethiopia, Colombia, and Guatemala to source sustainable specialty-grade coffee cherries.
+                    </p>
+                    <p class="about-text">
+                        Our master roasters meticulously slow-roast every batch to unlock complex notes of dark cocoa, roasted hazelnuts, and wild summer berries.
+                    </p>
+                    <div class="about-features">
+                        <div class="about-pill">
+                            <i class="fa-solid fa-leaf"></i>
+                            <span>Eco-Friendly Sourcing</span>
+                        </div>
+                        <div class="about-pill">
+                            <i class="fa-solid fa-temperature-arrow-up"></i>
+                            <span>Micro-Roasting Precision</span>
+                        </div>
+                        <div class="about-pill">
+                            <i class="fa-solid fa-heart"></i>
+                            <span>Crafted with Barista Love</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Signature Specials Section -->
+    <section class="specials-section" id="specials">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-subtitle">Barista Highlights</span>
+                <h2 class="section-title">Today's Signature Creations</h2>
+                <p class="section-description">Handpicked seasonal specialties prepared with rare beans and infused flavors.</p>
+            </div>
+
+            <div class="specials-grid">
+                <!-- Special 1 -->
+                <div class="special-card">
+                    <div class="special-img">
+                        <img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=600&q=80" alt="Vanilla Caramel Macchiato">
+                        <span class="special-badge">Chef Choice</span>
+                    </div>
+                    <div class="special-body">
+                        <div class="special-header">
+                            <h3>Caramel Velvet Macchiato</h3>
+                            <span class="special-price">$5.95</span>
+                        </div>
+                        <p class="special-desc">Freshly steamed vanilla milk marked with bold espresso and salted amber caramel drizzle.</p>
+                        <div class="flavor-notes">
+                            <span><i class="fa-solid fa-droplet"></i> Vanilla</span>
+                            <span><i class="fa-solid fa-candy-cane"></i> Salted Caramel</span>
+                        </div>
+                        <button type="button" class="btn btn-special-add add-to-cart-btn" data-id="spec-1">
+                            <i class="fa-solid fa-plus"></i> Add to Order
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Special 2 -->
+                <div class="special-card">
+                    <div class="special-img">
+                        <img src="https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?auto=format&fit=crop&w=600&q=80" alt="Nitro Cold Brew">
+                        <span class="special-badge">Iced Hit</span>
+                    </div>
+                    <div class="special-body">
+                        <div class="special-header">
+                            <h3>Nitro Cascade Cold Brew</h3>
+                            <span class="special-price">$6.50</span>
+                        </div>
+                        <p class="special-desc">Steeped for 24 hours in cold spring water and nitrogen-infused for a silky, Guinness-like creamy head.</p>
+                        <div class="flavor-notes">
+                            <span><i class="fa-solid fa-snowflake"></i> Chilled</span>
+                            <span><i class="fa-solid fa-cube"></i> Dark Chocolate</span>
+                        </div>
+                        <button type="button" class="btn btn-special-add add-to-cart-btn" data-id="spec-2">
+                            <i class="fa-solid fa-plus"></i> Add to Order
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Special 3 -->
+                <div class="special-card">
+                    <div class="special-img">
+                        <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=600&q=80" alt="Almond Croissant & Cappuccino Combo">
+                        <span class="special-badge">Bakery Combo</span>
+                    </div>
+                    <div class="special-body">
+                        <div class="special-header">
+                            <h3>Almond Croissant & Cappuccino</h3>
+                            <span class="special-price">$8.25</span>
+                        </div>
+                        <p class="special-desc">Flaky twice-baked French almond croissant paired with a silky microfoam double cappuccino.</p>
+                        <div class="flavor-notes">
+                            <span><i class="fa-solid fa-bread-slice"></i> French Butter</span>
+                            <span><i class="fa-solid fa-mug-saucer"></i> Cinnamon</span>
+                        </div>
+                        <button type="button" class="btn btn-special-add add-to-cart-btn" data-id="spec-3">
+                            <i class="fa-solid fa-plus"></i> Add to Order
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Coffee Menu Section -->
+    <section class="menu-section" id="menu">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-subtitle">Freshly Roasted Catalog</span>
+                <h2 class="section-title">Discover Our Artisanal Menu</h2>
+                <p class="section-description">Every cup is ground to order and pulled on our hand-calibrated Synesso espresso machine.</p>
+            </div>
+
+            <!-- Category Filter Tabs -->
+            <div class="category-tabs" id="category-tabs">
+                <button type="button" class="cat-tab active" data-category="all">
+                    <i class="fa-solid fa-mug-saucer"></i> All Offerings
+                </button>
+                <button type="button" class="cat-tab" data-category="hot-coffee">
+                    <i class="fa-solid fa-mug-hot"></i> Hot Brews
+                </button>
+                <button type="button" class="cat-tab" data-category="cold-coffee">
+                    <i class="fa-solid fa-glass-water-droplet"></i> Iced & Nitro
+                </button>
+                <button type="button" class="cat-tab" data-category="bakery">
+                    <i class="fa-solid fa-cookie-bite"></i> Bakery & Pastries
+                </button>
+                <button type="button" class="cat-tab" data-category="tea">
+                    <i class="fa-solid fa-leaf"></i> Organic Teas
+                </button>
+            </div>
+
+            <!-- Coffee Grid -->
+            <div class="coffee-grid" id="coffee-grid">
+                <!-- Dynamically populated via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Craft & Roasting Process Section -->
+    <section class="craft-section" id="craft">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-subtitle">From Bean to Cup</span>
+                <h2 class="section-title">The Four Pillars of Our Coffee Craft</h2>
+            </div>
+
+            <div class="craft-grid">
+                <div class="craft-card">
+                    <div class="craft-step">01</div>
+                    <div class="craft-icon">
+                        <i class="fa-solid fa-mountain-sun"></i>
+                    </div>
+                    <h3>High Altitude Harvesting</h3>
+                    <p>Hand-harvested red ripe cherries grown above 1,800m altitude for dense, nutrient-rich flavor profiles.</p>
+                </div>
+
+                <div class="craft-card">
+                    <div class="craft-step">02</div>
+                    <div class="craft-icon">
+                        <i class="fa-solid fa-fire"></i>
+                    </div>
+                    <h3>Small-Batch Drum Roasting</h3>
+                    <p>Slow roasted in cast-iron Giesen roasters under precise thermal curves to highlight bean terroir.</p>
+                </div>
+
+                <div class="craft-card">
+                    <div class="craft-step">03</div>
+                    <div class="craft-icon">
+                        <i class="fa-solid fa-water"></i>
+                    </div>
+                    <h3>Filtered Mineral Water</h3>
+                    <p>Triple reverse-osmosis water remineralized with calcium and magnesium for optimal flavor extraction.</p>
+                </div>
+
+                <div class="craft-card">
+                    <div class="craft-step">04</div>
+                    <div class="craft-icon">
+                        <i class="fa-solid fa-heart-pulse"></i>
+                    </div>
+                    <h3>Master Barista Precision</h3>
+                    <p>Precise grams, temperature, and extraction seconds dialed in every morning before first pour.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Reviews Section -->
+    <section class="reviews-section" id="reviews">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-subtitle">Community Love</span>
+                <h2 class="section-title">What Coffee Enthusiasts Say</h2>
+            </div>
+
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="review-quote">"The Cortado and Spanish Latte here are undeniably the best in the city. The aroma inside the café is pure heaven!"</p>
+                    <div class="reviewer-info">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80" alt="Isabella M." class="reviewer-avatar">
+                        <div>
+                            <h4>Isabella Moore</h4>
+                            <span>Coffee Sommelier</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="review-quote">"Working from their outdoor patio with a Nitro Cold Brew and warm Pistachio Croissant is my favorite morning routine."</p>
+                    <div class="reviewer-info">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80" alt="Liam Chen" class="reviewer-avatar">
+                        <div>
+                            <h4>Liam Chen</h4>
+                            <span>Creative Director</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="review-quote">"Table reservation was super seamless. The barista gave us a mini tasting session of their new Ethiopian beans. Outstanding service!"</p>
+                    <div class="reviewer-info">
+                        <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=120&q=80" alt="Clara Vance" class="reviewer-avatar">
+                        <div>
+                            <h4>Clara Vance</h4>
+                            <span>Daily Regular</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Coffee Club Newsletter -->
+    <section class="newsletter-section" id="contact">
+        <div class="section-container">
+            <div class="newsletter-card">
+                <div class="newsletter-content">
+                    <span class="badge-pill">Join The Club</span>
+                    <h2>Subscribe to The Daily Brew & Receive a Free Coffee Voucher</h2>
+                    <p>Get tasting notes on fresh harvests, brewing guides, and exclusive invitations to our quarterly cupping sessions.</p>
+                    <form class="newsletter-form" id="newsletter-form">
+                        <div class="input-wrap">
+                            <i class="fa-solid fa-envelope"></i>
+                            <input type="email" placeholder="Enter your email address..." required>
+                        </div>
+                        <button type="submit" class="btn btn-subscribe">Get Coffee Voucher</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="section-container">
+            <div class="footer-top">
+                <div class="footer-col brand-col">
+                    <a href="#home" class="brand-logo">
+                        <div class="logo-badge">
+                            <i class="fa-solid fa-mug-hot"></i>
+                        </div>
+                        <div class="logo-text-group">
+                            <span class="logo-title">Brew<strong>Craft</strong></span>
+                            <span class="logo-subtitle">Artisanal Roastery</span>
+                        </div>
+                    </a>
+                    <p class="footer-desc">Specialty coffee roastery and artisanal bakery crafting single-origin pour overs, smooth espresso blends, and gourmet pastries.</p>
+                    <div class="social-links">
+                        <a href="#" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" title="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="#" title="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">Our Story & Roastery</a></li>
+                        <li><a href="#specials">Signature Brews</a></li>
+                        <li><a href="#menu">Full Coffee Menu</a></li>
+                        <li><a href="#craft">The Roasting Craft</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Coffee Specialities</h4>
+                    <ul class="footer-links">
+                        <li><a href="#menu">Single Origin Pour Over</a></li>
+                        <li><a href="#menu">Nitro Cascade Cold Brew</a></li>
+                        <li><a href="#menu">Spanish Honey Latte</a></li>
+                        <li><a href="#menu">Ceremonial Grade Matcha</a></li>
+                        <li><a href="#menu">French Butter Croissants</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Café Hours & Location</h4>
+                    <ul class="opening-hours">
+                        <li><span>Mon - Fri:</span> <strong>06:30 AM - 08:30 PM</strong></li>
+                        <li><span>Sat - Sun:</span> <strong>07:00 AM - 10:00 PM</strong></li>
+                        <li><span>Location:</span> <strong>45 Roaster Street, Downtown</strong></li>
+                    </ul>
+                    <div class="contact-pill">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>+1 (800) BREW-COFFEE</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 BrewCraft Coffee Roasters. Handcrafted with <i class="fa-solid fa-heart" style="color: #c68b59;"></i> by <a href="https://github.com/Priyanshu-kumar-maurya" target="_blank" rel="noopener">Priyanshu Kumar Maurya</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Slide-Out Coffee Cart Drawer -->
+    <div class="cart-overlay" id="cart-overlay"></div>
+    <aside class="cart-drawer" id="cart-drawer">
+        <div class="cart-header">
+            <div class="cart-title">
+                <i class="fa-solid fa-mug-hot"></i>
+                <h3>Your Coffee Order (<span id="cart-items-count">0</span>)</h3>
+            </div>
+            <button type="button" class="close-cart-btn" id="close-cart-btn" title="Close Cart">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+
+        <div class="cart-body" id="cart-items-list">
+            <!-- Dynamically populated -->
+        </div>
+
+        <div class="cart-footer" id="cart-footer">
+            <div class="coupon-box">
+                <input type="text" id="coupon-input" placeholder="Promo code (e.g. BREW15)">
+                <button type="button" id="apply-coupon-btn">Apply</button>
+            </div>
+            <div class="coupon-msg" id="coupon-msg"></div>
+
+            <div class="bill-row">
+                <span>Subtotal</span>
+                <span id="bill-subtotal">$0.00</span>
+            </div>
+            <div class="bill-row" id="discount-row" style="display: none;">
+                <span>Discount (15%)</span>
+                <span class="discount-val" id="bill-discount">-$0.00</span>
+            </div>
+            <div class="bill-row">
+                <span>Eco Packaging</span>
+                <span id="bill-tax">$0.50</span>
+            </div>
+            <div class="bill-row total-row">
+                <span>Total Amount</span>
+                <strong id="bill-total">$0.00</strong>
+            </div>
+
+            <button type="button" class="btn btn-checkout" id="checkout-btn">
+                <span>Place Coffee Order</span>
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+        </div>
+    </aside>
+
+    <!-- Table Booking Modal -->
+    <div class="modal-overlay" id="booking-modal">
+        <div class="modal-card">
+            <button type="button" class="modal-close-btn" id="close-booking-btn">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="modal-header">
+                <div class="modal-icon">
+                    <i class="fa-solid fa-chair"></i>
+                </div>
+                <h2>Reserve a Cozy Table</h2>
+                <p>Enjoy fresh brews and baked delights with friends or a peaceful solo coffee session.</p>
+            </div>
+            <form id="booking-form">
+                <div class="form-row">
+                    <div class="input-group">
+                        <label>Your Name</label>
+                        <input type="text" placeholder="John Doe" required id="book-name">
+                    </div>
+                    <div class="input-group">
+                        <label>Guests</label>
+                        <select id="book-guests" required>
+                            <option value="1 Person">1 Person (Solo Brew)</option>
+                            <option value="2 People" selected>2 People</option>
+                            <option value="3-4 People">3-4 People</option>
+                            <option value="5+ Group">5+ Group Lounge</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="input-group">
+                        <label>Date</label>
+                        <input type="date" required id="book-date">
+                    </div>
+                    <div class="input-group">
+                        <label>Time Slot</label>
+                        <select id="book-time" required>
+                            <option value="Morning (08:00 AM - 11:00 AM)">Morning (08:00 AM - 11:00 AM)</option>
+                            <option value="Afternoon (12:00 PM - 03:00 PM)">Afternoon (12:00 PM - 03:00 PM)</option>
+                            <option value="Evening Twilight (04:30 PM - 08:00 PM)" selected>Evening Twilight (04:30 PM - 08:00 PM)</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label>Seating Preference</label>
+                    <select id="book-seating">
+                        <option value="Outdoor Sunlit Patio">Outdoor Sunlit Patio</option>
+                        <option value="Cozy Fireside Lounge" selected>Cozy Fireside Lounge</option>
+                        <option value="Barista Brew Bar View">Barista Brew Bar View</option>
+                        <option value="Quiet Work Corner with Power Outlets">Quiet Work Corner (Wi-Fi & Outlets)</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full" style="margin-top: 14px;">
+                    <span>Confirm Reservation</span>
+                    <i class="fa-solid fa-check"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Order Placed Success Modal -->
+    <div class="modal-overlay" id="order-modal">
+        <div class="order-success-card">
+            <div class="success-icon-wrap">
+                <i class="fa-solid fa-mug-hot"></i>
+            </div>
+            <h2>Brewing Your Order! ☕</h2>
+            <p>Your order has been received. Our barista is freshly grinding your beans and crafting your beverage.</p>
+            <div class="order-summary-box" id="modal-order-summary"></div>
+            <button type="button" class="btn btn-primary" id="close-order-modal-btn">Awesome, Back to Café</button>
+        </div>
+    </div>
+
+    <!-- Toast Alerts -->
+    <div class="toast-box" id="toast">
+        <i class="fa-solid fa-circle-check toast-icon"></i>
+        <span class="toast-text">Added to coffee order!</span>
+    </div>
+
+    <!-- Scripts with Cache Busting -->
+    <script src="index.js?v=2.0"></script>
+</body>
+</html>
